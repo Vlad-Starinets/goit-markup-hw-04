@@ -119,12 +119,16 @@ img {
     margin-left: 330px;
 }
 
+
 .contact-list-item:not(:last-child) {
      margin-right: 50px;
 }
 
+
 .contact-mail {
-    display: block; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -133,10 +137,28 @@ img {
     text-decoration: none;
     padding-top: 32px;
     padding-bottom: 32px;
+    width: 161px;
+    height: 16px;
+}
+
+.contact-mail .contact-icon {
+    width: 16px;
+    height: 12px;
+}
+
+.contact-tel .contact-icon{
+    width: 10px;
+    height: 16px;
+}
+
+.contact-icon {
+    padding-right: 10px;
 }
 
 .contact-tel {
-    display: block; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -145,7 +167,17 @@ img {
     text-decoration: none;
     padding-top: 32px;
     padding-bottom: 32px;
+    width: 142px;
+    height: 16px;
 }
+
+.contact-mail:hover .contact-icon,
+.contact-mail:focus .contact-icon,
+.contact-tel:hover .contact-icon,
+.contact-tel:focus .contact-icon {
+    fill: var(--accent-color);
+}
+
 
 
 /* ====================== END HEADER ========================= */
@@ -158,6 +190,18 @@ img {
     background: var(--background-color);
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ), 
+    url(../images/hero/bg.img.jpg);
+    max-width: 1600px;
+    /* height: 600px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .hero .container {
@@ -219,6 +263,24 @@ img {
 
 .features-item:not(:last-child) {
 margin-right: 30px;
+}
+
+
+.features-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+
+    margin-bottom: 30px;
+}
+
+.features-icon {
+    width: 70px;
+    height: 70px;
 }
 
 
@@ -297,7 +359,7 @@ margin-right: 30px;
 
 .team-section {
     margin: 15px;
-    background-color: #FFFFFF;
+    background-color: var(--second-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -335,12 +397,103 @@ margin-right: 30px;
     color: var(--main-text-color);
 
     text-align: center;
+    margin-bottom: 16px;
+}
+
+.team-social-list {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.team-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--second-text-color);
+    border-radius: 50%;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--accent-color);
+}
+
+.team-social-icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+
+.team-social-link:hover .team-social-icon,
+.team-social-link:hover .team-social-icon {
+    fill: var(--second-text-color);
 }
 
 
 
 
+
 /* ======================== END Our team ============================ */
+
+
+/* ============================ Regular clients =========================== */
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #E5E5E5;
+}
+
+.our-clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1,167px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--title-color);
+    margin-bottom: 50px;
+}
+
+
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.clients-icon {
+    fill: #AFB1B8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    border-color: var(--accent-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+    fill: var(--accent-color);
+}
+
+/* ============================ END Regular clients =========================== */
 
 /* ======================== footer ============================ */
 
@@ -350,6 +503,9 @@ margin-right: 30px;
     padding-bottom: 60px;
 }
 
+.address-info {
+    margin-right: 70px;
+}
 
 .footer .logo {
     padding: 0;
@@ -399,6 +555,63 @@ margin-right: 30px;
     font-style: normal;
 }
 
+.footer-social-item {
+    list-style: none;
+}
+
+ .footer .container{
+    display: flex;
+}
+
+.footer-social-list {
+    display: flex;
+}
+
+.footer-social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-social-call {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--second-text-color);
+
+    margin-bottom: 20px;
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon {
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: #2196F3;
+}
+
+/* .footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+    fill: #FFFFFF;
+} */
+
+
+
+
+
 
 /* ======================== END footer ============================ */
 
@@ -429,6 +642,9 @@ margin-right: 30px;
     text-decoration: none;
 }
 
+.portfolio-nav-list:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio-button {
 font-weight: 500;
@@ -467,7 +683,7 @@ cursor: pointer;
     padding-right: 24px;
     padding-bottom: 20px;
     padding-left: 24px;
-    background: #FFFFFF;
+    background: var(--second-text-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
 }
